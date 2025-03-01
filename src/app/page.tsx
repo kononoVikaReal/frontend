@@ -5,7 +5,6 @@ import Footer from '@/components/Footer/Footer'
 import FourthElement from '@/components/FourthElement/FourthElement'
 import HomeHeader from '@/components/HomeHeader/HomeHeader'
 import NinthElement from '@/components/NinthElement/NinthElement'
-import OfficeMap from '@/components/OfficeMap/OfficeMap'
 import SecondElement from '@/components/SecondElement/SecondElement'
 import SeventhElement from '@/components/SeventhElement/SeventhElement'
 import SixthElement from '@/components/SixthElement/SixthElement'
@@ -34,8 +33,6 @@ export default function Home() {
 			<EleventhElement />
 			<TwelfthElement />
 			<ThirteenthElement />
-			{/* Карта офисов */}
-			<OfficeMap />
 			<Footer />
 		</div>
 	)

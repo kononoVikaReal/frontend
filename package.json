@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build --legacy-peer-deps",
+		"build": "next build",
 		"start": "next start",
 		"lint": "next lint"
 	},
@@ -17,7 +17,6 @@
 		"next": "^15.2.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
-		"react-yandex-maps-constructor": "^1.0.4",
 		"tailwind-merge": "^3.0.2",
 		"tailwindcss-animate": "^1.0.7"
 	},
