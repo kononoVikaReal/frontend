@@ -15,8 +15,30 @@ import './globals.css'
 // })
 
 export const metadata: Metadata = {
-	title: 'МПЦ',
-	description: 'МПЦ',
+	title: 'Межрегиональный правовой центр',
+	description:
+		'«Межрегиональный правовой центр» (МПЦ) — это юридическая компания, которая оказывает помощь гражданам, организациям и индивидуальным предпринимателям',
+	icons: {
+		icon: '/favicon.ico',
+	},
+	keywords: 'МПЦ, Межрегиональный правовой центр',
+	viewport: 'width=device-width, initial-scale=1.0',
+	openGraph: {
+		title: 'Межрегиональный правовой центр» (МПЦ)',
+		description:
+			'«Межрегиональный правовой центр» (МПЦ) — это юридическая компания, которая оказывает помощь гражданам, организациям и индивидуальным предпринимателям',
+		url: 'https://mpctest.vercel.app/',
+		siteName: 'Межрегиональный правовой центр» (МПЦ)',
+		images: [
+			{
+				url: 'https://mpctest.vercel.app/MPCIcon.jpg',
+				width: 800,
+				height: 600,
+			},
+		],
+		locale: 'ru_RU',
+		type: 'website',
+	},
 }
 
 export default function RootLayout({
@@ -27,6 +49,7 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<Head>
+				{/* Шрифт */}
 				<Link rel='preconnect' href='https://fonts.googleapis.com' />
 				<Link rel='preconnect' href='https://fonts.gstatic.com' />
 				<Link
