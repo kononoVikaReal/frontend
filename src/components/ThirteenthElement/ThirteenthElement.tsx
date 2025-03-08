@@ -118,57 +118,31 @@ const ThirteenthElement = () => {
 								</span>
 							</div>
 						</div>
-						{/* <form className='flex flex-col justify-between gap-2'>
-							<div className='flex flex-col gap-4'>
-								<input
-									className='bg-gray-800 text-white rounded-lg px-4 h-20'
-									placeholder='Ваше имя'
-										required
-									type='text'
-								/>
-								<input
-									className='bg-gray-800 text-white rounded-lg px-4 h-20'
-									placeholder='+7 999 123-45-67'
-										pattern='[+]{0,1}[0-9\s\-]+'
-										required
-								/>
-							</div>
 
-							<button className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-6 rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg '>
-								Заказать звонок
-							</button>
-						</form> */}
-						<form className='flex flex-col gap-6 items-end'>
-							<div className='w-full flex flex-col gap-4'>
-								{/* Поле имени */}
-								<div className='flex-1'>
+						<form className='space-y-4'>
+							<div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+								<div className='md:col-span-1'>
 									<input
-										type='text'
-										className='w-full px-4 py-3 bg-[#16161C] border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-400 text-gray-100'
+										className='h-14 px-4 bg-transparent text-white border-amber-600 rounded-md focus:border-amber-500 focus:ring-amber-500'
 										placeholder='Ваше имя'
-										required
 									/>
 								</div>
-
-								{/* Поле телефона */}
-								<div className='flex-1'>
+								<div className='md:col-span-1'>
 									<input
+										className='h-14 px-4 bg-transparent text-white border-amber-600 rounded-md focus:border-amber-500 focus:ring-amber-500'
+										placeholder='Номер телефона'
 										type='tel'
-										className='w-full px-4 py-3 bg-[#16161C] border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-400 text-gray-100'
-										placeholder='+7 999 123-45-67'
-										pattern='[+]{0,1}[0-9\s\-]+'
-										required
 									/>
+								</div>
+								<div className='md:col-span-1'>
+									<button
+										type='submit'
+										className='w-full h-14 bg-amber-600 hover:bg-amber-700 text-white rounded-md'
+									>
+										Зарегистрироваться
+									</button>
 								</div>
 							</div>
-
-							{/* Кнопка */}
-							<button
-								type='submit'
-								className='w-full bg-blue-600 hover:bg-blue-700 font-semibold px-8 py-3 rounded-lg transition-all hover:shadow-lg hover:scale-[1.02]'
-							>
-								Заказать звонок
-							</button>
 						</form>
 					</div>
 				</div>

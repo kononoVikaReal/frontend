@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import FeedBackForm from '../FeedBackForm/FeedBackForm'
 
 const items = [
 	{
@@ -19,7 +20,7 @@ const SeventhElement = () => {
 	return (
 		<div className='mx-auto max-w-[1200px] mb-14'>
 			<div className='pt-10'>
-				<div className=''>
+				<div className='mb-4'>
 					<div className="relative before:content-[''] before:block before:border before:border-elite before:absolute before:w-[1000px] before:-left-[1039px] before:top-3 mb-4">
 						<span className='text-[28px] leading-[45px] font-prata '>
 							Качественное юридическое сопровождение
@@ -34,7 +35,7 @@ const SeventhElement = () => {
 								<div className='relative h-64 w-full'>
 									<div className='absolute bottom-0 left-0 p-6 z-20 w-full  blur-xl bg-black'></div>
 									<div className='absolute bottom-0 left-0 p-2 z-20 w-full '>
-										<h2 className='text-sm font-semibold'>
+										<h2 className='text-lg font-semibold'>
 											{index + 1}. {item.title}
 										</h2>
 									</div>
@@ -52,6 +53,7 @@ const SeventhElement = () => {
 						))}
 					</div>
 				</div>
+				<FeedBackForm />
 			</div>
 		</div>
 	)

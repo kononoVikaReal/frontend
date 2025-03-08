@@ -6,15 +6,15 @@ const people = [
 		image: '/IgorMatveev.png',
 	},
 	{
-		name: 'Мухтар Саидович',
+		name: 'Мухтар Магомедов',
 		image: '/MuxtarSaidovich.png',
 	},
 	{
-		name: 'Юлия Владимировна',
+		name: 'Юлия Власова',
 		image: '/JuliaVladimirovna.png',
 	},
 	{
-		name: 'Вадим Геннадьевич',
+		name: 'Вадим Ерхов',
 		image: '/VadimGennadevich.png',
 	},
 ]
@@ -30,12 +30,12 @@ const FifthElement = () => {
 						</span>
 					</div>
 					<h2 className='text-2xl font-medium mb-6'>
-						Обучение{' '}
-						<span className='px-2 rounded-sm bg-blue-500'>без воды</span> от
-						лучших юристов Межрегионального правового центра
+						Обучение без воды от лучших юристов Межрегионального правового
+						центра
 					</h2>
 				</div>
-				<div className='grid grid-cols-4 gap-4 mb-4'>
+				{/* Кружки */}
+				<div className='grid grid-cols-4 gap-4 mb-4 mt-12'>
 					{people.map((person, index) => (
 						<div key={index} className='flex flex-col items-center group'>
 							<Image
@@ -50,15 +50,17 @@ const FifthElement = () => {
 						</div>
 					))}
 				</div>
-				<div className='text-center'>
-					<span className='font-medium text-lg p-4'>
-						МПЦ — это <strong>сплоченный коллектив</strong> профессионалов в
-						сфере
-						<em> юриспруденции</em>, <em>практики</em> и{' '}
-						<em>реальных кейсов</em> от действующих экспертов рынка юридических
-						услуг
-					</span>
-				</div>
+				{/* Приписка */}
+				<p className='text-lg text-white-700 font-light'>
+					МПЦ — это{' '}
+					<span className='font-medium text-white-900'>
+						сплоченный коллектив профессионалов
+					</span>{' '}
+					в сфере юриспруденции, практики и{' '}
+					<span className='font-medium text-white-900'>реальных кейсов</span> от{' '}
+					<span className='italic'>действующих экспертов</span> рынка
+					юридических услуг.
+				</p>
 			</div>
 		</div>
 	)
