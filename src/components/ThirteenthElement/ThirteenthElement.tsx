@@ -3,27 +3,28 @@ import Image from 'next/image'
 const speakers = [
 	{
 		avatar: '/IgorMatveev.png',
-		name: 'Игорь Матвеев',
-		role: 'Автор проекта',
-		description: 'Описание',
+		name: 'Игорь Владимирович Матвеев',
+		role: 'Автор проекта, юрист',
+		description: 'Окончил университет МВД России',
 	},
 	{
 		avatar: '/MuxtarSaidovich.png',
-		name: 'Мухтар Саидович',
-		role: 'Юрист МПЦ',
-		description: 'Описание',
+		name: 'Мухтар Саидович Магомедов',
+		role: 'Юрист',
+		description: 'Окончил Вологодский институт права и экономики ФСИН России',
 	},
 	{
 		avatar: '/VadimGennadevich.png',
-		name: 'Вадим Геннадьевич',
-		role: 'Юрист МПЦ',
-		description: 'Описание',
+		name: 'Вадим Геннадьевич Ерхов',
+		role: 'Юрист',
+		description: 'Окончил Московскую государственную юридическую академию',
 	},
 	{
 		avatar: '/JuliaVladimirovna.png',
-		name: 'Юлия Владимировна',
-		role: 'Юрист МПЦ',
-		description: 'Описание',
+		name: 'Юлия Владимировна Власова',
+		role: 'Адвокат по соглашению',
+		description:
+			'Окончила институт внешнеэкономических связей экономики и права',
 	},
 ]
 
@@ -42,25 +43,34 @@ const ThirteenthElement = () => {
 						{speakers.map((speaker, index) => (
 							<div
 								key={index}
-								className='bg-gray-800 p-4 rounded-lg flex duration-300 ease-in transition-all hover:scale-105 hover:shadow-[0_0_20px_-5px_rgba(96,165,250,0.3)] opacity-80 hover:opacity-100 hover:before:absolute hover:before:inset-0 hover:before:border-2 hover:before:border-blue-400 hover:before:animate-pulse group'
+								className='relative bg-gray-900 p-6 rounded-2xl flex items-center shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-[0_4px_30px_rgba(96,165,250,0.4)] group'
 							>
-								<Image
-									alt={`Portrait of ${speaker.name}`}
-									className='rounded-xl mr-4'
-									height='159'
-									objectFit='scale-down'
-									src={speaker.avatar}
-									width='144'
-								/>
-								<div className='w-full'>
-									<h2 className='text-lg font-semibold'>{speaker.name}</h2>
+								<div className='relative flex-shrink-0'>
+									<Image
+										alt={`Portrait of ${speaker.name}`}
+										className='rounded-full border-4 border-gray-700 transition-all duration-300 group-hover:border-blue-400'
+										height={96}
+										width={96}
+										src={speaker.avatar}
+									/>
+								</div>
+
+								<div className='ml-6 w-full'>
+									<h2 className='text-xl font-bold text-white'>
+										{speaker.name}
+									</h2>
 									<p className='text-gray-400'>{speaker.role}</p>
-									<div className='mt-2 h-1 bg-gradient-to-r from-blue-400 to-purple-400 opacity-10 transition-opacity group-hover:opacity-50 rounded-full'></div>
-									<div className='flex space-x-2 mt-2'>
-										<i className='fas fa-envelope text-gray-400'>
-											{speaker.description}
-										</i>
-									</div>
+									{/* РАЗДЕЛИТЕЛЬ */}
+									<div className='mt-2 h-1 w-full bg-gradient-to-r from-blue-400 to-purple-400 opacity-20 transition-opacity group-hover:opacity-60 rounded-full'></div>
+
+									<p className='mt-3 text-gray-300 text-sm leading-relaxed'>
+										{speaker.description}
+									</p>
+								</div>
+
+								{/* Декоративный эффект на фоне */}
+								<div className='absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500'>
+									<div className='absolute inset-0 rounded-2xl border border-blue-400 animate-pulse'></div>
 								</div>
 							</div>
 						))}
@@ -70,20 +80,6 @@ const ThirteenthElement = () => {
 						Не упустите возможность решить проблему быстро и качественно
 					</p>
 					<div className='mx-auto max-w-fit flex gap-6'>
-						{/* <div className='grid gap-2 text-xl'>
-							<div className=''>
-								<span> {'>'} Расскажите о проблеме</span>
-							</div>
-							<div className=''>
-								<span> {'>'} Получите консультацию</span>
-							</div>
-							<div className=''>
-								<span> {'>'} Станьте клиентом</span>
-							</div>
-							<div className=''>
-								<span> {'>'} Забудьте о проблеме</span>
-							</div>
-						</div> */}
 						<div className='grid gap-6 text-xl p-8 bg-[#ededed] rounded-lg'>
 							<div className='flex items-center gap-4 hover:bg-white p-2 rounded-lg transition-all duration-300 cursor-pointer'>
 								<span className='flex items-center justify-center w-8 h-8 rounded-full bg-gray-800 text-white transition-all duration-300 hover:bg-black hover:scale-110'>
