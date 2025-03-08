@@ -39,7 +39,7 @@ const ThirteenthElement = () => {
 						</span>
 					</div>
 					{/* Спикеры */}
-					<div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8'>
+					<div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8'>
 						{speakers.map((speaker, index) => (
 							<div
 								key={index}

@@ -26,7 +26,7 @@ export default {
 			},
 			colors: {
 				background: '#16161C',
-				foreground: '#ededed',
+				foreground: '#EDEDED',
 				elite: '#D1A564',
 				circle: '#D6A374',
 				detailsBackground: '#F5F5F5',

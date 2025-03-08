@@ -15,6 +15,7 @@ import TenthElement from '@/components/TenthElement/TenthElement'
 import ThirdElement from '@/components/ThirdElement/ThirdElement'
 import ThirteenthElement from '@/components/ThirteenthElement/ThirteenthElement'
 import TwelfthElement from '@/components/TwelfthElement/TwelfthElement'
+import VisitOfficeElement from '@/components/VisitOfficeElement/VisitOfficeElement'
 
 export default function Home() {
 	return (
@@ -35,6 +36,7 @@ export default function Home() {
 			<TwelfthElement />
 			<ThirteenthElement />
 			<FourteenthElement />
+			<VisitOfficeElement />
 			<Footer />
 		</div>
 	)
