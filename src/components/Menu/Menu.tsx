@@ -260,16 +260,19 @@ const Contact02Icon = (props: React.SVGProps<SVGSVGElement>) => (
 )
 
 export const MPCLogo = () => (
-	<div className='relative flex flex-col justify-center items-center content-center'>
+	<div className='flex justify-center items-center content-center'>
+		<div className='flex flex-col'>
+			<span className='text-xl'>Межрегиональный</span>
+			<span className='text-center text-2xl'>правовой центр</span>
+		</div>
 		<Image
-			src={'/MPCIcon.jpg'}
-			alt={''}
-			width={40}
-			height={40}
-			className='rounded-full absolute -top-5 -right-10'
+			src={'/MPCIcon.png'}
+			alt={'MPC Icon'}
+			width={60}
+			height={60}
+			quality={100}
+			className='rounded-full'
 		/>
-		<span className='text-2xl'>Межрегиональный</span>
-		<span className='text-center text-xl'>правовой центр</span>
 	</div>
 )
 
