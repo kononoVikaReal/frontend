@@ -9,30 +9,27 @@ const StartElement = () => {
 				<Menu />
 				<OfficeInformation />
 			</div>
-			<h1 className='text-center text-3xl leading-[58px] font-medium group'>
-				МПЦ – это команда профессиональных юристов{' '}
-				<span className='transition-all duration-500 ease-in-out  group-hover:bg-elite group-hover:px-2 group-hover:rounded-sm'>
-					нового формата
-				</span>
+			<h1 className='text-right text-3xl leading-[58px] font-medium pr-4'>
+				МПЦ – это команда профессиональных юристов нового формата
 			</h1>
 			<div className='flex gap-4'>
 				<Image
 					src={'/IgorMatveev.png'}
 					alt={'Igor Matveev'}
-					width={100}
-					height={100}
+					width={135}
+					height={135}
 					className='rounded-lg'
 				/>
-				<div className='flex flex-col gap-4'>
-					<h2 className='text-lg'>
-						Мы представляем интересы граждан и юридических лиц по уголовным,
-						гражданским, административным и арбитражным делам. Все области
-						права, в том числе международное.
-					</h2>
-					<h3 className='text-base text-gray-300'>
-						Игорь Матвеев - Автор проекта МПЦ
-					</h3>
-				</div>
+
+				<blockquote className='text-lg text-gray-300 border-l-4 border-gray-500 pl-4 italic'>
+					“Мы представляем интересы граждан и юридических лиц по уголовным,
+					<br />
+					гражданским, административным и арбитражным делам. <br />
+					Все области права, в том числе международное.”
+					<footer className='mt-2 text-sm text-gray-400'>
+						— Игорь Матвеев - Автор проекта МПЦ
+					</footer>
+				</blockquote>
 			</div>
 		</div>
 	)
