@@ -22,7 +22,6 @@ export const metadata: Metadata = {
 		icon: '/favicon.ico',
 	},
 	keywords: 'МПЦ, Межрегиональный правовой центр',
-	viewport: 'width=device-width, initial-scale=1.0',
 	openGraph: {
 		title: 'Межрегиональный правовой центр» (МПЦ)',
 		description:
@@ -40,6 +39,8 @@ export const metadata: Metadata = {
 		type: 'website',
 	},
 }
+
+export const viewport = 'width=device-width, initial-scale=1.0'
 
 export default function RootLayout({
 	children,

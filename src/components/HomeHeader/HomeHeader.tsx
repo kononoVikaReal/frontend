@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-// ICONS
+// Иконки
 const UserAccountIcon = (props: React.SVGProps<SVGSVGElement>) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
@@ -92,7 +92,7 @@ const HomeHeader = () => {
 	return (
 		<header className='flex justify-end h-full px-4 mx-auto max-w-[1200px]'>
 			<nav className='flex justify-center items-center gap-12'>
-				{/* User account */}
+				{/* Личный кабинет */}
 				<Link
 					href='#'
 					className='flex items-center gap-2 opacity-60 text-xs leading-[14px] font-medium duration-300 border-b-[3px] border-[gray] hover:border-[white] hover:opacity-100 group py-0 h-11'
@@ -104,7 +104,7 @@ const HomeHeader = () => {
 					</span>
 				</Link>
 
-				{/* Get consultation */}
+				{/* Получить консультацию */}
 				<Link
 					href='#'
 					className='flex items-center gap-2 py-2  opacity-60 text-xs leading-[14px] font-medium duration-300 border-b-[3px] border-[gray] hover:border-[white] hover:opacity-100 h-11 group'
