@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const TenthElement = async () => {
 	// YouTube
-	const googleAPIKey = 'AIzaSyApZW5u8ox16fLnmnGkvuasLhM7e9GZmko'
+	const googleAPIKey = process.env.GOOGLE_API_KEY
 	const youtubeChannelID = 'UCOESKqC1ycRpuZ62uCzmRFA'
 	const youtubeSubscribers = await axios
 		.get(
@@ -12,8 +12,7 @@ const TenthElement = async () => {
 		.then(res => res.data.items[0].statistics.subscriberCount)
 	// VK
 	const vkGroupID = '211186476'
-	const vkAPIKey =
-		'vk1.a.RpbM3ImeQWWPTErDNY6Zongl3_BJX9aRFuMyzfqEWnzumowG76G4yMU_4gq0HfllrpB9epMquKrIYUUTf66ZyXvNvQLfBl3UIHLpPhX6dwEiOhMzzAfKP8Gd_We_53Tn3sGOvMR9rOc11Pexu9ctvmiw0llSYLIUNSGpTqtsgnWMTagEJ_ccxmyNfAKP5sff3DgzDt1OiBnsi0b_ii8_lw'
+	const vkAPIKey = process.env.VK_API_KEY
 	const vkSubscribers = await axios
 		.get(
 			`http://api.vk.com/method/groups.getById?group_ids=${vkGroupID}&fields=members_count&access_token=${vkAPIKey}&v=5.81`
