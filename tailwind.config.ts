@@ -9,6 +9,10 @@ export default {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				montserrat: ['Montserrat', 'sans-serif'],
+				prata: ['Prata', 'sans-serif'],
+			},
 			screens: {
 				xs: '480px',
 				sm: '640px',

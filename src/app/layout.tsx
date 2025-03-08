@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-
+import { Prata } from 'next/font/google'
 import Head from 'next/head'
 import Link from 'next/link'
 import './globals.css'
@@ -13,6 +13,14 @@ import './globals.css'
 // 	variable: '--font-geist-mono',
 // 	subsets: ['latin'],
 // })
+
+const prataStatic = Prata({
+	variable: '--font-prata',
+	weight: ['400'],
+	subsets: ['cyrillic', 'latin'],
+	display: 'swap', // Add font-display strategy
+	preload: true, // Ensure font preloading
+})
 
 export const metadata: Metadata = {
 	title: 'Межрегиональный правовой центр',
@@ -48,7 +56,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='ru'>
+		<html lang='ru' className={`${prataStatic.variable} antialiased`}>
 			<Head>
 				<meta name='apple-mobile-web-app-title' content='МПЦ' />
 				<meta name='application-name' content='МПЦ' />
