@@ -1,3 +1,5 @@
+import Circle from '../Circle/Circle'
+
 const CallIcon = (props: React.SVGProps<SVGSVGElement>) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
@@ -17,6 +19,21 @@ const CallIcon = (props: React.SVGProps<SVGSVGElement>) => (
 	</svg>
 )
 
+const circlesInfo = [
+	{
+		digit: '1',
+		title: 'Юридические услуги гражданам',
+	},
+	{
+		digit: '2',
+		title: 'Юридические услуги бизнесу',
+	},
+	{
+		digit: '3',
+		title: 'Процедура медиации',
+	},
+]
+
 const SecondElement = () => {
 	return (
 		<div className='bg-slate-50 text-black pb-8'>
@@ -29,41 +46,9 @@ const SecondElement = () => {
 
 				{/* Кружки с направлениями */}
 				<div className='mt-16 grid md:grid-cols-3 gap-8 mb-24'>
-					{/* Первое направление */}
-					<div className='flex flex-col items-center text-center group'>
-						<div className='w-16 h-16 rounded-full bg-circle flex items-center justify-center mb-6 transition-all duration-500 ease-in-out group-hover:scale-110'>
-							<span className='text-white font-medium text-[20px]'>01.</span>
-						</div>
-						<p className='text-lg font-medium'>
-							Юридические услуги
-							<br />
-							гражданам
-						</p>
-					</div>
-
-					{/* Второе направление */}
-					<div className='flex flex-col items-center text-center group'>
-						<div className='w-16 h-16 rounded-full bg-circle flex items-center justify-center mb-6 transition-all duration-500 ease-in-out group-hover:scale-110'>
-							<span className='text-white font-medium text-[20px]'>02.</span>
-						</div>
-						<p className='text-lg font-medium'>
-							Юридические услуги
-							<br />
-							бизнесу
-						</p>
-					</div>
-
-					{/* Третье направление */}
-					<div className='flex flex-col items-center text-center group'>
-						<div className='w-16 h-16 rounded-full bg-circle flex items-center justify-center mb-6 transition-all duration-500 ease-in-out group-hover:scale-110'>
-							<span className='text-white font-medium text-[20px]'>03.</span>
-						</div>
-						<p className='text-lg font-medium'>
-							Процедура
-							<br />
-							медиации
-						</p>
-					</div>
+					{circlesInfo.map((circle, index) => (
+						<Circle key={index} digit={circle.digit} title={circle.title} />
+					))}
 				</div>
 
 				{/* Секция 1 с деталями */}
