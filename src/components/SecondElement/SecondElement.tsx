@@ -22,7 +22,7 @@ const SecondElement = () => {
 		<div className='bg-slate-50 text-black pb-8'>
 			<div className='pt-10 mx-auto max-w-[1200px]'>
 				<div className="relative before:content-[''] before:block before:border before:border-elite before:absolute before:w-[1000px] before:-left-[1039px] before:top-3">
-					<span className='text-3xl leading-[45px] w-96'>
+					<span className='text-[28px] leading-[45px] w-96 font-prata text-background'>
 						На данный момент у нас есть 3 основных направления
 					</span>
 				</div>
@@ -31,8 +31,8 @@ const SecondElement = () => {
 				<div className='mt-16 grid md:grid-cols-3 gap-8 mb-24'>
 					{/* Первое направление */}
 					<div className='flex flex-col items-center text-center group'>
-						<div className='w-16 h-16 rounded-full bg-[#E6BE8A] flex items-center justify-center mb-6 transition-all duration-500 ease-in-out group-hover:scale-110'>
-							<span className='text-white font-medium'>01.</span>
+						<div className='w-16 h-16 rounded-full bg-circle flex items-center justify-center mb-6 transition-all duration-500 ease-in-out group-hover:scale-110'>
+							<span className='text-white font-medium text-[20px]'>01.</span>
 						</div>
 						<p className='text-lg font-medium'>
 							Юридические услуги
@@ -43,8 +43,8 @@ const SecondElement = () => {
 
 					{/* Второе направление */}
 					<div className='flex flex-col items-center text-center group'>
-						<div className='w-16 h-16 rounded-full bg-[#E6BE8A] flex items-center justify-center mb-6 transition-all duration-500 ease-in-out group-hover:scale-110'>
-							<span className='text-white font-medium'>02.</span>
+						<div className='w-16 h-16 rounded-full bg-circle flex items-center justify-center mb-6 transition-all duration-500 ease-in-out group-hover:scale-110'>
+							<span className='text-white font-medium text-[20px]'>02.</span>
 						</div>
 						<p className='text-lg font-medium'>
 							Юридические услуги
@@ -55,8 +55,8 @@ const SecondElement = () => {
 
 					{/* Третье направление */}
 					<div className='flex flex-col items-center text-center group'>
-						<div className='w-16 h-16 rounded-full bg-[#E6BE8A] flex items-center justify-center mb-6 transition-all duration-500 ease-in-out group-hover:scale-110'>
-							<span className='text-white font-medium'>03.</span>
+						<div className='w-16 h-16 rounded-full bg-circle flex items-center justify-center mb-6 transition-all duration-500 ease-in-out group-hover:scale-110'>
+							<span className='text-white font-medium text-[20px]'>03.</span>
 						</div>
 						<p className='text-lg font-medium'>
 							Процедура

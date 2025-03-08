@@ -25,6 +25,7 @@ export default {
 				background: '#16161C',
 				foreground: '#ededed',
 				elite: '#D1A564',
+				circle: '#D6A374',
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
