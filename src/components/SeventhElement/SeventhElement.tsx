@@ -53,7 +53,7 @@ const SeventhElement = () => {
 						))}
 					</div>
 				</div>
-				<FeedBackForm />
+				<FeedBackForm beforeFooter={false} />
 			</div>
 		</div>
 	)

@@ -2,6 +2,7 @@ import EighthElement from '@/components/EighthElement/EighthElement'
 import EleventhElement from '@/components/EleventhElement/EleventhElement'
 import FifthElement from '@/components/FifthElement/FifthElement'
 import Footer from '@/components/Footer/Footer'
+import FourteenthElement from '@/components/FourteenthElement/FourteenthElement'
 import FourthElement from '@/components/FourthElement/FourthElement'
 import HomeHeader from '@/components/HomeHeader/HomeHeader'
 import NinthElement from '@/components/NinthElement/NinthElement'
@@ -33,6 +34,7 @@ export default function Home() {
 			<EleventhElement />
 			<TwelfthElement />
 			<ThirteenthElement />
+			<FourteenthElement />
 			<Footer />
 		</div>
 	)

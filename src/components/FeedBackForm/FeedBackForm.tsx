@@ -1,7 +1,7 @@
 'use client'
 import { FormEvent, useState } from 'react'
 
-const FeedBackForm = () => {
+const FeedBackForm = ({ beforeFooter }: { beforeFooter: boolean }) => {
 	const [name, setName] = useState('')
 	const [phone, setPhone] = useState('')
 
@@ -13,12 +13,18 @@ const FeedBackForm = () => {
 	}
 
 	return (
-		<div className='max-w-3xl mx-auto rounded-lg p-6'>
+		<div className={`max-w-3xl mx-auto rounded-lg ${!beforeFooter && 'pt-6'}`}>
 			<form
 				onSubmit={handleSubmit}
-				className='flex flex-col md:flex-row gap-4 items-end'
+				className={`flex ${
+					beforeFooter ? 'flex-col' : 'flex-row'
+				} gap-4 items-end`}
 			>
-				<div className='flex-1 w-full flex flex-col md:flex-row gap-4'>
+				<div
+					className={`flex-1 w-full flex ${
+						beforeFooter ? 'flex-col' : 'flex-row'
+					} gap-4`}
+				>
 					{/* Поле имени */}
 					<div className='flex-1'>
 						<label className='sr-only'>Ваше имя</label>
@@ -26,7 +32,9 @@ const FeedBackForm = () => {
 							type='text'
 							value={name}
 							onChange={e => setName(e.target.value)}
-							className='w-full p-4 bg-[#16161C] border-2 border-elite rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-elite text-elite'
+							className={`w-full p-4 ${
+								!beforeFooter && 'bg-[#16161C] placeholder-elite text-elite'
+							}  border-2 border-elite rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent `}
 							placeholder='Ваше имя'
 							required
 						/>
@@ -39,7 +47,9 @@ const FeedBackForm = () => {
 							type='tel'
 							value={phone}
 							onChange={e => setPhone(e.target.value)}
-							className='w-full p-4 bg-[#16161C] border-2 border-elite rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-elite text-elite'
+							className={`w-full p-4 ${
+								!beforeFooter && 'bg-[#16161C] placeholder-elite text-elite'
+							} border-2 border-elite rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent`}
 							placeholder='Номер телефона'
 							pattern='[+]{0,1}[0-9\s\-]+'
 							required
@@ -48,7 +58,9 @@ const FeedBackForm = () => {
 				</div>
 				<button
 					type='submit'
-					className='bg-elite text-white p-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg'
+					className={`bg-elite text-white p-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg ${
+						beforeFooter && 'w-full'
+					}`}
 				>
 					Заказать звонок
 				</button>

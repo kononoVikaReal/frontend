@@ -65,7 +65,7 @@ const ThirdElement = () => {
 					Смотреть все
 				</span>
 			</button>
-			<FeedBackForm />
+			<FeedBackForm beforeFooter={false} />
 		</div>
 	)
 }

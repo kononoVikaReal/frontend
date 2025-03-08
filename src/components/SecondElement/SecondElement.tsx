@@ -628,7 +628,13 @@ const SecondElement = () => {
 				{/* Кружки с направлениями */}
 				<div className='mt-16 grid md:grid-cols-3 gap-8 mb-24'>
 					{circlesInfo.map((circle, index) => (
-						<Circle key={index} digit={circle.digit} title={circle.title} />
+						<div
+							className='flex flex-col items-center text-center group'
+							key={index}
+						>
+							<Circle digit={circle.digit} />
+							<p className='text-lg font-medium'>{circle.title}</p>
+						</div>
 					))}
 				</div>
 				{/* Секции с деталями по направлениям */}
