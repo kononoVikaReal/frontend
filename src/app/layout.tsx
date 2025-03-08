@@ -50,6 +50,14 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<Head>
+				<meta name='apple-mobile-web-app-title' content='МПЦ' />
+				<meta name='application-name' content='МПЦ' />
+				<meta name='apple-mobile-web-app-capable' content='yes' />
+				<meta
+					name='apple-mobile-web-app-status-bar-style'
+					content='black-translucent'
+				/>
+				<link rel='apple-touch-icon' href='/MPCIcon.png' />
 				{/* Шрифт */}
 				<Link rel='preconnect' href='https://fonts.googleapis.com' />
 				<Link rel='preconnect' href='https://fonts.gstatic.com' />
