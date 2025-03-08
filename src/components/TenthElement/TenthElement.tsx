@@ -1,10 +1,38 @@
+import axios from 'axios'
 import Link from 'next/link'
 
-const TenthElement = () => {
+const TenthElement = async () => {
+	// YouTube
+	const googleAPIKey = 'AIzaSyApZW5u8ox16fLnmnGkvuasLhM7e9GZmko'
+	const youtubeChannelID = 'UCOESKqC1ycRpuZ62uCzmRFA'
+	const youtubeSubscribers = await axios
+		.get(
+			`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeChannelID}&fields=items/statistics/subscriberCount&key=${googleAPIKey}`
+		)
+		.then(res => res.data.items[0].statistics.subscriberCount)
+	// VK
+	const vkGroupID = '211186476'
+	const vkAPIKey =
+		'vk1.a.RpbM3ImeQWWPTErDNY6Zongl3_BJX9aRFuMyzfqEWnzumowG76G4yMU_4gq0HfllrpB9epMquKrIYUUTf66ZyXvNvQLfBl3UIHLpPhX6dwEiOhMzzAfKP8Gd_We_53Tn3sGOvMR9rOc11Pexu9ctvmiw0llSYLIUNSGpTqtsgnWMTagEJ_ccxmyNfAKP5sff3DgzDt1OiBnsi0b_ii8_lw'
+	const vkSubscribers = await axios
+		.get(
+			`http://api.vk.com/method/groups.getById?group_ids=${vkGroupID}&fields=members_count&access_token=${vkAPIKey}&v=5.81`
+		)
+		.then(res => res.data.response[0].members_count)
+	// Дзен
+	// На момент 2025 года у них нету API (по крайней мере, общедоступного)
+	const zenSubscribers = 68400
+	// RuTube
+	const rutubeID = '24837155'
+	const rutubeSubscribers = await axios
+		.get(`https://rutube.ru/api/profile/user/${rutubeID}`)
+		.then(res => res.data.subscribers_count)
 	return (
-		<div className='bg-slate-50 text-[#16161c] pb-8'>
+		<div className='bg-[#CBCDCA] text-[#16161c] pb-8'>
 			<div className='pt-10 mx-auto max-w-[1200px] px-4'>
-				<h2 className='flex mx-auto w-max text-4xl mb-12'>МПЦ в Медиа</h2>
+				<h2 className='flex mx-auto w-max text-4xl mb-12 font-prata'>
+					МПЦ в Медиа
+				</h2>
 
 				<div className='grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8'>
 					{/* YouTube Card */}
@@ -27,34 +55,10 @@ const TenthElement = () => {
 								/>
 							</svg>
 							<span className='font-medium'>YouTube</span>
+							<span className='text-sm text-gray-500'>
+								{youtubeSubscribers}
+							</span>
 							<span className='text-sm text-gray-600'>Подписаться</span>
-						</div>
-					</Link>
-
-					{/* Dzen Card */}
-					<Link
-						href='https://dzen.ru/mpc'
-						target='_blank'
-						rel='noopener noreferrer'
-						className='p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 hover:bg-gray-100'
-					>
-						<div className='flex flex-col items-center'>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								className='w-10 h-10 mb-4'
-								viewBox='0 0 36 24'
-							>
-								<path
-									fill='#2C3036'
-									d='M16.7 16.7c-2.2 2.27-2.36 5.1-2.55 11.3 5.78 0 9.77-.02 11.83-2.02 2-2.06 2.02-6.24 2.02-11.83-6.2.2-9.03.35-11.3 2.55M0 14.15c0 5.59.02 9.77 2.02 11.83 2.06 2 6.05 2.02 11.83 2.02-.2-6.2-.35-9.03-2.55-11.3-2.27-2.2-5.1-2.36-11.3-2.55M13.85 0C8.08 0 4.08.02 2.02 2.02.02 4.08 0 8.26 0 13.85c6.2-.2 9.03-.35 11.3-2.55 2.2-2.27 2.36-5.1 2.55-11.3m2.85 11.3C14.5 9.03 14.34 6.2 14.15 0c5.78 0 9.77.02 11.83 2.02 2 2.06 2.02 6.24 2.02 11.83-6.2-.2-9.03-.35-11.3-2.55'
-								></path>
-								<path
-									fill='#fff'
-									d='M28 14.15v-.3c-6.2-.2-9.03-.35-11.3-2.55-2.2-2.27-2.36-5.1-2.55-11.3h-.3c-.2 6.2-.35 9.03-2.55 11.3-2.27 2.2-5.1 2.36-11.3 2.55v.3c6.2.2 9.03.35 11.3 2.55 2.2 2.27 2.36 5.1 2.55 11.3h.3c.2-6.2.35-9.03 2.55-11.3 2.27-2.2 5.1-2.36 11.3-2.55'
-								></path>
-							</svg>
-							<span className='font-medium'>Дзен</span>
-							<span className='text-sm text-gray-600'>Присоединиться</span>
 						</div>
 					</Link>
 
@@ -84,6 +88,32 @@ const TenthElement = () => {
 								/>
 							</svg>
 							<span className='font-medium'>VK</span>
+							<span className='text-sm text-gray-500'>{vkSubscribers}</span>
+							<span className='text-sm text-gray-600'>Подписаться</span>
+						</div>
+					</Link>
+
+					{/* Dzen Card */}
+					<Link
+						href='https://dzen.ru/mpc'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 hover:bg-gray-100'
+					>
+						<div className='flex flex-col items-center'>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								x='0px'
+								y='0px'
+								width='100'
+								height='100'
+								viewBox='0 0 50 50'
+								className='w-10 h-10 mb-4'
+							>
+								<path d='M46.894 23.986c.004 0 .007 0 .011 0 .279 0 .545-.117.734-.322.192-.208.287-.487.262-.769C46.897 11.852 38.154 3.106 27.11 2.1c-.28-.022-.562.069-.77.262-.208.192-.324.463-.321.746C26.193 17.784 28.129 23.781 46.894 23.986zM46.894 26.014c-18.765.205-20.7 6.202-20.874 20.878-.003.283.113.554.321.746.186.171.429.266.679.266.03 0 .061-.001.091-.004 11.044-1.006 19.787-9.751 20.79-20.795.025-.282-.069-.561-.262-.769C47.446 26.128 47.177 26.025 46.894 26.014zM22.823 2.105C11.814 3.14 3.099 11.884 2.1 22.897c-.025.282.069.561.262.769.189.205.456.321.734.321.004 0 .008 0 .012 0 18.703-.215 20.634-6.209 20.81-20.875.003-.283-.114-.555-.322-.747C23.386 2.173 23.105 2.079 22.823 2.105zM3.107 26.013c-.311-.035-.555.113-.746.321-.192.208-.287.487-.262.769.999 11.013 9.715 19.757 20.724 20.792.031.003.063.004.094.004.25 0 .492-.094.678-.265.208-.192.325-.464.322-.747C23.741 32.222 21.811 26.228 3.107 26.013z'></path>
+							</svg>
+							<span className='font-medium'>Дзен</span>
+							<span className='text-sm text-gray-500'>{zenSubscribers}</span>
 							<span className='text-sm text-gray-600'>Подписаться</span>
 						</div>
 					</Link>
@@ -133,6 +163,7 @@ const TenthElement = () => {
 								</defs>
 							</svg>
 							<span className='font-medium'>RuTube</span>
+							<span className='text-sm text-gray-500'>{rutubeSubscribers}</span>
 							<span className='text-sm text-gray-600'>Подписаться</span>
 						</div>
 					</Link>
