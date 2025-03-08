@@ -21,7 +21,7 @@ const SeventhElement = () => {
 			<div className='pt-10'>
 				<div className=''>
 					<div className="relative before:content-[''] before:block before:border before:border-elite before:absolute before:w-[1000px] before:-left-[1039px] before:top-3 mb-4">
-						<span className='text-3xl leading-[45px] w-96'>
+						<span className='text-[28px] leading-[45px] font-prata '>
 							Качественное юридическое сопровождение
 						</span>
 					</div>

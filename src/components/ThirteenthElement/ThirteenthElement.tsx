@@ -32,13 +32,11 @@ const ThirteenthElement = () => {
 		<div className='mx-auto max-w-[1200px] mb-14'>
 			<div className='pt-10'>
 				<div className='container mx-auto p-4'>
-					<div className='bg-gray-800 text-white py-2 px-4 rounded-lg mb-8 hover:scale-110 duration-300 ease-in transition-all w-fit'>
-						Команда
+					<div className="relative before:content-[''] before:block before:border before:border-elite before:absolute before:w-[1000px] before:-left-[1039px] before:top-3 mb-4">
+						<span className='text-[28px] leading-[45px] font-prata '>
+							Спикеры МПЦ
+						</span>
 					</div>
-					<h1 className='text-4xl font-bold mb-8'>
-						Спикеры&nbsp;
-						<span className='text-red-500'>МПЦ</span>
-					</h1>
 					{/* Спикеры */}
 					<div className='grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8'>
 						{speakers.map((speaker, index) => (

@@ -620,7 +620,7 @@ const SecondElement = () => {
 		<div className='bg-slate-50 text-black pb-8'>
 			<div className='pt-10 mx-auto max-w-[1200px]'>
 				<div className="relative before:content-[''] before:block before:border before:border-elite before:absolute before:w-[1000px] before:-left-[1039px] before:top-3">
-					<span className='text-[28px] leading-[45px] w-96 font-prata text-background'>
+					<span className='text-[28px] leading-[45px] font-prata text-background'>
 						На данный момент у нас есть 3 основных направления
 					</span>
 				</div>
@@ -648,15 +648,11 @@ const SecondElement = () => {
 							<CallIcon className='w-6 h-6 text-blue-600' />
 						</div>
 						<span className='text-gray-700 text-lg leading-snug font-medium'>
-							Для получения подробной информации и заказе услуги
-							<br />
-							<span className='text-gray-500 font-normal'>
-								закажите обратный звонок
-							</span>
+							Для получения подробной информации и заказа услуги
 						</span>
 					</div>
 
-					<button className='bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg'>
+					<button className='bg-elite text-white p-5 rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg'>
 						Заказать звонок
 					</button>
 				</div>
