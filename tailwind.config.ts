@@ -9,6 +9,9 @@ export default {
 	],
 	theme: {
 		extend: {
+			boxShadow: {
+				detailsHeader: '0px 0px 31.3px 0px rgba(0, 0, 0, 0.15)',
+			},
 			fontFamily: {
 				montserrat: ['Montserrat', 'sans-serif'],
 				prata: ['Prata', 'sans-serif'],
@@ -26,6 +29,8 @@ export default {
 				foreground: '#ededed',
 				elite: '#D1A564',
 				circle: '#D6A374',
+				detailsBackground: '#F5F5F5',
+				detailsPointTitle: '#DBA878',
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
