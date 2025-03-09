@@ -19,7 +19,7 @@ import VisitOfficeElement from '@/components/VisitOfficeElement/VisitOfficeEleme
 
 export default function Home() {
 	return (
-		<div className='bg-background selection:text-elite'>
+		<main className='bg-background selection:text-elite'>
 			<SocialHeader />
 			<HomeHeader />
 			<StartElement />
@@ -38,6 +38,6 @@ export default function Home() {
 			<FourteenthElement />
 			<VisitOfficeElement />
 			<Footer />
-		</div>
+		</main>
 	)
 }

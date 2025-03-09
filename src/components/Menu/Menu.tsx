@@ -354,6 +354,7 @@ export const MPCLogo = () => (
 // 	)
 // }
 
+// Меню после нажатия на 'бургер'
 const FullMenu = ({
 	closeMenu,
 }: {
@@ -472,11 +473,13 @@ const FullMenu = ({
 	</div>
 )
 
+// 'Начальное' меню
 const Menu = () => {
+	// Для меню по нажатию на 'бургер'
 	const [showMenu, setShowMenu] = useState<boolean>(false)
-
+	// Для sticky-меню
 	const [isVisible, setIsVisible] = useState(false)
-
+	// Для того, чтобы понять, с какого момента отобразить sticky-меню
 	useEffect(() => {
 		const checkVisibility = () => {
 			const firstSection = document.getElementById('forStickyMenu')
@@ -514,8 +517,8 @@ const Menu = () => {
 					<MPCLogo />
 				</div>
 			</div>
-			{/* Sticky-меню */}
 
+			{/* Sticky-меню */}
 			<div
 				className={cn(
 					'fixed top-0 left-0 w-full bg-background backdrop-blur-lg z-30 shadow-md transition-transform duration-500',
