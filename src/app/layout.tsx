@@ -74,7 +74,7 @@ export default function RootLayout({
 					rel='stylesheet'
 				/>
 			</Head>
-			<body className={`antialiased`}>{children}</body>
+			<body className={`antialiased bg-background`}>{children}</body>
 		</html>
 	)
 }
