@@ -8,8 +8,8 @@ const VisitOfficeElement = () => {
 				<Image
 					src='/SaintPetersburg.webp'
 					alt='Saint-Petersburg'
-					layout='fill'
-					objectFit='cover'
+					fill
+					style={{ objectFit: 'cover' }}
 					className='z-0'
 				/>
 			</div>

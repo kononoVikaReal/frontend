@@ -43,8 +43,8 @@ const SeventhElement = () => {
 										<Image
 											src={item.image}
 											alt={item.title}
-											layout='fill'
-											objectFit='cover'
+											fill
+											style={{ objectFit: 'cover' }}
 											className='absolute inset-0'
 										/>
 									</div>

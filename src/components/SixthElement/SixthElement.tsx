@@ -24,8 +24,8 @@ const SixthElement = () => {
 							<Image
 								src='/BusinessCenter1.webp'
 								alt='Atrium with glass ceiling'
-								layout='fill'
-								objectFit='cover'
+								fill
+								style={{ objectFit: 'cover' }}
 								className='transition-transform duration-300 hover:scale-105'
 							/>
 						</div>
@@ -37,8 +37,8 @@ const SixthElement = () => {
 							<Image
 								src='/BusinessCenter2.webp'
 								alt='Cozy meeting area with plants'
-								layout='fill'
-								objectFit='cover'
+								fill
+								style={{ objectFit: 'cover' }}
 								className='transition-transform duration-300 hover:scale-105'
 							/>
 						</div>
@@ -49,8 +49,8 @@ const SixthElement = () => {
 							<Image
 								src='/BusinessCenter3.webp'
 								alt='Workspace with Broker display'
-								layout='fill'
-								objectFit='cover'
+								fill
+								style={{ objectFit: 'cover' }}
 								className='transition-transform duration-300 hover:scale-105'
 							/>
 						</div>
@@ -61,8 +61,8 @@ const SixthElement = () => {
 							<Image
 								src='/BusinessCenter4.webp'
 								alt='Indoor garden space'
-								layout='fill'
-								objectFit='cover'
+								fill
+								style={{ objectFit: 'cover' }}
 								className='transition-transform duration-300 hover:scale-105'
 							/>
 						</div>
@@ -73,8 +73,8 @@ const SixthElement = () => {
 							<Image
 								src='/BusinessCenter5.webp'
 								alt='Meeting table with chairs'
-								layout='fill'
-								objectFit='cover'
+								fill
+								style={{ objectFit: 'cover' }}
 								className='transition-transform duration-300 hover:scale-105'
 							/>
 						</div>

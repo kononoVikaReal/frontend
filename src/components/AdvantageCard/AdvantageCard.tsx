@@ -22,9 +22,9 @@ const AdvantageCard = ({
 			{/* Картинка */}
 			<div className='absolute inset-0'>
 				<Image
-					src={item.icon || '/api/placeholder/400/320'}
+					src={item.icon}
 					alt={item.heading}
-					layout='fill'
+					fill={true}
 					className='w-full h-full object-cover'
 				/>
 				<div className='absolute inset-0 '></div>
