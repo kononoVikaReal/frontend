@@ -25,7 +25,7 @@ const cases = [
 	{
 		attorney: {
 			fullName: 'Юрист МПЦ',
-			imageUrl: '/MPCICon.png',
+			imageUrl: '/MPCIcon.png',
 			lawyerType: 'Юрист',
 		},
 		caseDetails: {
@@ -44,7 +44,7 @@ const cases = [
 	{
 		attorney: {
 			fullName: 'Юрист МПЦ',
-			imageUrl: '/MPCICon.png',
+			imageUrl: '/MPCIcon.png',
 			lawyerType: 'Юрист',
 		},
 		caseDetails: {
