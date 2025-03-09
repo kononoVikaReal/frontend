@@ -6,7 +6,7 @@ export type City = 'Saint-Petersburg' | 'Tula' | 'Krasnodar' | 'Sevastopol'
 
 const cities: City[] = ['Saint-Petersburg', 'Tula', 'Krasnodar', 'Sevastopol']
 
-const CallIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const CallIcon = (props: React.SVGProps<SVGSVGElement>) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 24 24'

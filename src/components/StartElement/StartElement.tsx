@@ -4,7 +4,7 @@ import OfficeInformation from '../OfficeInformation/OfficeInformation'
 
 const StartElement = () => {
 	return (
-		<div className='mx-auto max-w-[1200px] mb-14'>
+		<div className='mx-auto max-w-[1200px] mb-14' id='forStickyMenu'>
 			<div className='flex justify-between my-4'>
 				<Menu />
 				<OfficeInformation />

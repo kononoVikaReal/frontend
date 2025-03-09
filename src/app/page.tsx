@@ -11,6 +11,7 @@ import SeventhElement from '@/components/SeventhElement/SeventhElement'
 import SixthElement from '@/components/SixthElement/SixthElement'
 import SocialHeader from '@/components/SocialHeader/SocialHeader'
 import StartElement from '@/components/StartElement/StartElement'
+import StickyMenu from '@/components/StickyMenu/StickyMenu'
 import TenthElement from '@/components/TenthElement/TenthElement'
 import ThirdElement from '@/components/ThirdElement/ThirdElement'
 import ThirteenthElement from '@/components/ThirteenthElement/ThirteenthElement'
@@ -23,6 +24,7 @@ export default function Home() {
 			<SocialHeader />
 			<HomeHeader />
 			<StartElement />
+			<StickyMenu />
 			<SecondElement />
 			<ThirdElement />
 			<FourthElement />

@@ -48,7 +48,7 @@ const TwelfthElement = () => {
 								{index !== 0 && (
 									<div className='h-1 bg-gradient-to-r from-blue-400 to-purple-400 opacity-30 transition-opacity group-hover:opacity-70 rounded-lg'></div>
 								)}
-								<h3 className='text-2xl font-medium text-neutral-800'>
+								<h3 className='text-xl font-medium text-neutral-800'>
 									{service.title}
 								</h3>
 
@@ -59,12 +59,12 @@ const TwelfthElement = () => {
 											className='relative bg-white p-6 rounded-xl border border-neutral-100 hover:border-neutral-200 hover:scale-105  transition-all duration-300'
 										>
 											<div className='flex flex-col justify-between h-full'>
-												<div className='text-lg font-normal text-neutral-600 mb-4'>
+												<span className='text-lg font-normal text-neutral-600 mb-4'>
 													{element.title}
-												</div>
-												<div className='text-3xl font-semibold text-neutral-900'>
+												</span>
+												<span className='text-3xl font-semibold text-neutral-900'>
 													{element.price}
-												</div>
+												</span>
 											</div>
 										</div>
 									))}

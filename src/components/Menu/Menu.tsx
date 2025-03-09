@@ -295,7 +295,7 @@ const FullMenu = ({
 				<div className=''>
 					<div className='relative flex flex-col'>
 						<Image
-							src={'/MPCIcon.jpg'}
+							src={'/MPCIcon.png'}
 							alt={''}
 							width={40}
 							height={40}
@@ -312,39 +312,39 @@ const FullMenu = ({
 				<nav className='flex flex-col gap-6 text-lg'>
 					<div className='flex items-center gap-4'>
 						<InformationCircleIcon />
-						<a
+						<Link
 							href='#'
 							className='hover:text-gray-300 transition-all duration-300 ease-in-out'
 						>
 							Наши услуги
-						</a>
+						</Link>
 					</div>
 					<div className='flex items-center gap-4'>
 						<AdventureIcon />
-						<a
+						<Link
 							href='#'
 							className='hover:text-gray-300 transition-all duration-300 ease-in-out'
 						>
 							Судебная практика
-						</a>
+						</Link>
 					</div>
 					<div className='flex items-center gap-4'>
 						<LegalDocument02Icon />
-						<a
+						<Link
 							href='#'
 							className='hover:text-gray-300 transition-all duration-300 ease-in-out'
 						>
 							Прайс-лист
-						</a>
+						</Link>
 					</div>
 					<div className='flex items-center gap-4'>
 						<Contact02Icon />
-						<a
+						<Link
 							href='#'
 							className='hover:text-gray-300 transition-all duration-300 ease-in-out'
 						>
 							Контакты
-						</a>
+						</Link>
 					</div>
 				</nav>
 				<div className='flex justify-center flex-col gap-5'>
