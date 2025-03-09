@@ -431,6 +431,9 @@ const FullMenu = ({
 					<span className='text-2xl'>
 						Свяжитесь с нами любым удобным способом
 					</span>
+					{/* РАЗДЕЛИТЕЛЬ */}
+					<div className='mt-2 h-1 w-full bg-gradient-to-r from-elite to-purple-400 opacity-70 transition-opacity rounded-full'></div>
+
 					<div className='flex justify-between items-center gap-5'>
 						<div className='flex gap-5'>
 							<Link

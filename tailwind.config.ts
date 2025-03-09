@@ -69,6 +69,44 @@ export default {
 					'4': 'hsl(var(--chart-4))',
 					'5': 'hsl(var(--chart-5))',
 				},
+				// Base dark background
+				midnight: {
+					DEFAULT: '#16161C',
+					light: '#1C1C23',
+				},
+				// Primary accent - Purple/Blue
+				aurora: {
+					DEFAULT: '#7C5DFA',
+					light: '#9277FF',
+				},
+				// Secondary colors
+				frost: {
+					DEFAULT: '#E4E7FF',
+					dark: '#DFE3FA',
+				},
+				// Success/Positive
+				emerald: {
+					DEFAULT: '#33D69F',
+					light: '#4AEDC4',
+				},
+				// Warning/Attention
+				amber: {
+					DEFAULT: '#FF8F00',
+					light: '#FFA726',
+				},
+				// Text colors
+				slate: {
+					50: '#F8FAFC',
+					100: '#F1F5F9',
+					200: '#E2E8F0',
+					300: '#CBD5E1',
+					400: '#94A3B8',
+					500: '#64748B',
+					600: '#475569',
+					700: '#334155',
+					800: '#1E293B',
+					900: '#0F172A',
+				},
 			},
 			backgroundImage: {
 				socialHeader:
