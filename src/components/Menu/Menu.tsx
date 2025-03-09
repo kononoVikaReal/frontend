@@ -261,7 +261,7 @@ const Contact02Icon = (props: React.SVGProps<SVGSVGElement>) => (
 )
 
 export const MPCLogo = () => (
-	<div className='flex justify-center items-center content-center'>
+	<div className='flex justify-center items-center content-center gap-4'>
 		<div className='flex flex-col'>
 			<span className='text-xl'>Межрегиональный</span>
 			<span className='text-center text-2xl'>правовой центр</span>
@@ -373,7 +373,7 @@ const FullMenu = ({
 				{/* Логотип */}
 				<div className=''>
 					<div className='relative flex flex-col'>
-						<Image
+						{/* <Image
 							src={'/MPCIcon.png'}
 							alt={''}
 							width={40}
@@ -381,7 +381,8 @@ const FullMenu = ({
 							className='rounded-full absolute -top-5 -right-10'
 						/>
 						<span className='text-2xl'>Межрегиональный</span>
-						<span className='text-center text-xl'>правовой центр</span>
+						<span className='text-center text-xl'>правовой центр</span> */}
+						<MPCLogo />
 					</div>
 				</div>
 			</div>
