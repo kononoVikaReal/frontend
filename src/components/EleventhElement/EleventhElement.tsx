@@ -26,7 +26,7 @@ const EleventhElement = () => {
 								</p>
 								<Link
 									className='w-full md:max-w-fit bg-[#55A4FC] font-semibold px-8 py-3 rounded-lg transition-all hover:shadow-lg hover:scale-[1.05]'
-									href='https://t.me/mpcrf'
+									href='https://t.me/tribute/app?startapp=slWk'
 									target='_blank'
 								>
 									Подписаться
