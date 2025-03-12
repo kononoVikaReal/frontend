@@ -7,6 +7,7 @@ const StartElement = () => {
 		<div className='mx-auto max-w-[1200px] mb-14' id='forStickyMenu'>
 			<div className='flex justify-between my-4'>
 				<Menu />
+
 				<OfficeInformation />
 			</div>
 			<h1 className='text-right text-3xl leading-[58px] font-medium pr-4'>

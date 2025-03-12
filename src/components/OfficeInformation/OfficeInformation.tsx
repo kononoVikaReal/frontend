@@ -1,10 +1,7 @@
 'use client'
 import Link from 'next/link'
 import React, { Dispatch, SetStateAction, useState } from 'react'
-
-export type City = 'Saint-Petersburg' | 'Tula' | 'Krasnodar' | 'Sevastopol'
-
-const cities: City[] = ['Saint-Petersburg', 'Tula', 'Krasnodar', 'Sevastopol']
+import { City, useCity } from '../CityContext/CityContext'
 
 export const CallIcon = (props: React.SVGProps<SVGSVGElement>) => (
 	<svg
@@ -107,7 +104,8 @@ const cityData = {
 const OfficeInformation: React.FC<{
 	shareCity?: Dispatch<SetStateAction<City>>
 }> = ({ shareCity }) => {
-	const [currentCity, setCurrentCity] = useState<City>('Saint-Petersburg')
+	// const [currentCity, setCurrentCity] = useState<City>('Saint-Petersburg')
+	const { currentCity, setCurrentCity, cities } = useCity()
 	const [isOpen, setIsOpen] = useState(false)
 
 	const toggleDropdown = () => {

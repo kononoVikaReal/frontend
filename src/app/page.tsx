@@ -1,3 +1,4 @@
+import { CityProvider } from '@/components/CityContext/CityContext'
 import EighthElement from '@/components/EighthElement/EighthElement'
 import EleventhElement from '@/components/EleventhElement/EleventhElement'
 import FifthElement from '@/components/FifthElement/FifthElement'
@@ -91,30 +92,31 @@ export default async function Home() {
 	const rutubeSubscribers = await getRutubeSubscribers()
 	return (
 		<main className='bg-background selection:text-elite'>
-			<SocialHeader />
-			<HomeHeader />
-			<StartElement />
-			<SecondElement />
-			<ThirdElement />
-			<FourthElement />
-			<FifthElement />
-			<SixthElement />
-			<SeventhElement />
-			<EighthElement />
-			<NinthElement />
-
-			<TenthElement
-				youtubeSubscribers={youtubeSubscribers}
-				vkSubscribers={vkSubscribers}
-				zenSubscribers={zenSubscribers}
-				rutubeSubscribers={rutubeSubscribers}
-			/>
-			<EleventhElement />
-			<TwelfthElement />
-			<ThirteenthElement />
-			<FourteenthElement />
-			<VisitOfficeElement />
-			<Footer />
+			<CityProvider>
+				<SocialHeader />
+				<HomeHeader />
+				<StartElement />
+				<SecondElement />
+				<ThirdElement />
+				<FourthElement />
+				<FifthElement />
+				<SixthElement />
+				<SeventhElement />
+				<EighthElement />
+				<NinthElement />
+				<TenthElement
+					youtubeSubscribers={youtubeSubscribers}
+					vkSubscribers={vkSubscribers}
+					zenSubscribers={zenSubscribers}
+					rutubeSubscribers={rutubeSubscribers}
+				/>
+				<EleventhElement />
+				<TwelfthElement />
+				<ThirteenthElement />
+				<FourteenthElement />
+				<VisitOfficeElement />
+				<Footer />
+			</CityProvider>
 		</main>
 	)
 }
