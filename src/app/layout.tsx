@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Prata } from 'next/font/google'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -42,6 +42,11 @@ export const metadata: Metadata = {
 		statusBarStyle: 'black-translucent',
 		capable: true,
 	},
+}
+
+export const viewport: Viewport = {
+	initialScale: 1,
+	width: 'device-width',
 }
 
 export default function RootLayout({
