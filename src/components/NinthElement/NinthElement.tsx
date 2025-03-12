@@ -35,7 +35,7 @@ const NinthElement = () => {
 								<div className='relative w-36 h-36 '>
 									<Image
 										src='/PublicTelegramQR.jpg'
-										alt='QR Code for Telegram Channel'
+										alt='QR Code for public Telegram Channel'
 										width={130}
 										height={130}
 										className='rounded-lg'

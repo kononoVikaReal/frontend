@@ -22,7 +22,7 @@ const Instruction = () => {
 				{items.map((item, index) => (
 					<div key={index} className='flex items-center'>
 						{/* Шаг с цифрой */}
-						<div className='flex flex-col max-w-[150px] mx-auto ml-4'>
+						<div className='flex flex-col max-w-[160px] mx-auto ml-4'>
 							<Circle digit={index + 1 + ''} />
 							<h3 className='font-medium text-lg ml-2 '>{item.title}</h3>
 						</div>

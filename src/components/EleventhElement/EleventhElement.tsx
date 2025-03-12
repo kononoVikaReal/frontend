@@ -36,8 +36,8 @@ const EleventhElement = () => {
 							<div className='flex-shrink-0 hover:scale-110 transition-all ease-out duration-500'>
 								<div className='relative w-36 h-36 '>
 									<Image
-										src='/PublicTelegramQR.jpg'
-										alt='QR Code for Telegram Channel'
+										src='/PrivateTelegramQR.jpg'
+										alt='QR Code for private Telegram Channel'
 										width={150}
 										height={150}
 										className='rounded-lg'

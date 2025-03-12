@@ -269,10 +269,10 @@ export const MPCLogo = () => (
 		<Image
 			src={'/MPCIcon.png'}
 			alt={'MPC Icon'}
-			width={60}
-			height={60}
+			width={50}
+			height={50}
 			quality={100}
-			className='rounded-full'
+			style={{ objectFit: 'cover' }}
 		/>
 	</div>
 )

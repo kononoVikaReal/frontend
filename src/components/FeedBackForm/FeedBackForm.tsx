@@ -32,8 +32,10 @@ const FeedBackForm = ({ beforeFooter }: { beforeFooter: boolean }) => {
 							type='text'
 							value={name}
 							onChange={e => setName(e.target.value)}
-							className={`w-full p-4 ${
-								!beforeFooter && 'bg-[#16161C] placeholder-elite text-elite'
+							className={`w-full ${
+								beforeFooter
+									? 'py-5 pl-4 pr-24 bg-transparent'
+									: 'p-4 bg-[#16161C] placeholder-elite text-elite'
 							}  border-2 border-elite rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent `}
 							placeholder='Ваше имя'
 							required
@@ -47,8 +49,10 @@ const FeedBackForm = ({ beforeFooter }: { beforeFooter: boolean }) => {
 							type='tel'
 							value={phone}
 							onChange={e => setPhone(e.target.value)}
-							className={`w-full p-4 ${
-								!beforeFooter && 'bg-[#16161C] placeholder-elite text-elite'
+							className={`w-full  ${
+								beforeFooter
+									? 'py-5 pl-4 pr-24 bg-transparent'
+									: 'p-4 bg-[#16161C] placeholder-elite text-elite'
 							} border-2 border-elite rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent`}
 							placeholder='Номер телефона'
 							pattern='[+]{0,1}[0-9\s\-]+'
@@ -58,7 +62,7 @@ const FeedBackForm = ({ beforeFooter }: { beforeFooter: boolean }) => {
 				</div>
 				<button
 					type='submit'
-					className={`bg-elite text-white p-4 rounded-xl font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg ${
+					className={`bg-elite text-white p-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg ${
 						beforeFooter && 'w-full'
 					}`}
 				>
