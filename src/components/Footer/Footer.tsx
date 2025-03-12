@@ -30,7 +30,7 @@ const Footer = () => {
 						</Link>
 
 						<Link
-							href={`tel:+78007771700`}
+							href={`tel:88007771700`}
 							target='_blank'
 							className='flex gap-4 items-center relative group cursor-pointer'
 						>

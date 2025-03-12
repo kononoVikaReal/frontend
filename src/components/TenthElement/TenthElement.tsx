@@ -1,31 +1,16 @@
-import axios from 'axios'
 import Link from 'next/link'
 
-const TenthElement = async () => {
-	// YouTube
-	const googleAPIKey = process.env.GOOGLE_API_KEY
-	const youtubeChannelID = 'UCOESKqC1ycRpuZ62uCzmRFA'
-	const youtubeSubscribers = await axios
-		.get(
-			`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeChannelID}&fields=items/statistics/subscriberCount&key=${googleAPIKey}`
-		)
-		.then(res => res.data.items[0].statistics.subscriberCount)
-	// VK
-	const vkGroupID = '211186476'
-	const vkAPIKey = process.env.VK_API_KEY
-	const vkSubscribers = await axios
-		.get(
-			`http://api.vk.com/method/groups.getById?group_ids=${vkGroupID}&fields=members_count&access_token=${vkAPIKey}&v=5.81`
-		)
-		.then(res => res.data.response[0].members_count)
-	// Дзен
-	// На момент 2025 года у них нету API (по крайней мере, общедоступного)
-	const zenSubscribers = 68400
-	// RuTube
-	const rutubeID = '24837155'
-	const rutubeSubscribers = await axios
-		.get(`https://rutube.ru/api/profile/user/${rutubeID}`)
-		.then(res => res.data.subscribers_count)
+const TenthElement = async ({
+	youtubeSubscribers,
+	vkSubscribers,
+	zenSubscribers,
+	rutubeSubscribers,
+}: {
+	youtubeSubscribers?: number
+	vkSubscribers?: number
+	zenSubscribers?: number
+	rutubeSubscribers?: number
+}) => {
 	return (
 		<div className='bg-[#CBCDCA] text-[#16161c] pb-8'>
 			<div className='pt-10 mx-auto max-w-[1200px] px-4'>
@@ -55,7 +40,7 @@ const TenthElement = async () => {
 							</svg>
 							<span className='font-medium'>YouTube</span>
 							<span className='text-sm text-gray-500'>
-								{youtubeSubscribers}
+								{youtubeSubscribers ? youtubeSubscribers : '0'}
 							</span>
 							<span className='text-sm text-gray-600'>Подписаться</span>
 						</div>
@@ -87,7 +72,9 @@ const TenthElement = async () => {
 								/>
 							</svg>
 							<span className='font-medium'>VK</span>
-							<span className='text-sm text-gray-500'>{vkSubscribers}</span>
+							<span className='text-sm text-gray-500'>
+								{vkSubscribers ? vkSubscribers : '0'}
+							</span>
 							<span className='text-sm text-gray-600'>Подписаться</span>
 						</div>
 					</Link>
@@ -112,7 +99,9 @@ const TenthElement = async () => {
 								<path d='M46.894 23.986c.004 0 .007 0 .011 0 .279 0 .545-.117.734-.322.192-.208.287-.487.262-.769C46.897 11.852 38.154 3.106 27.11 2.1c-.28-.022-.562.069-.77.262-.208.192-.324.463-.321.746C26.193 17.784 28.129 23.781 46.894 23.986zM46.894 26.014c-18.765.205-20.7 6.202-20.874 20.878-.003.283.113.554.321.746.186.171.429.266.679.266.03 0 .061-.001.091-.004 11.044-1.006 19.787-9.751 20.79-20.795.025-.282-.069-.561-.262-.769C47.446 26.128 47.177 26.025 46.894 26.014zM22.823 2.105C11.814 3.14 3.099 11.884 2.1 22.897c-.025.282.069.561.262.769.189.205.456.321.734.321.004 0 .008 0 .012 0 18.703-.215 20.634-6.209 20.81-20.875.003-.283-.114-.555-.322-.747C23.386 2.173 23.105 2.079 22.823 2.105zM3.107 26.013c-.311-.035-.555.113-.746.321-.192.208-.287.487-.262.769.999 11.013 9.715 19.757 20.724 20.792.031.003.063.004.094.004.25 0 .492-.094.678-.265.208-.192.325-.464.322-.747C23.741 32.222 21.811 26.228 3.107 26.013z'></path>
 							</svg>
 							<span className='font-medium'>Дзен</span>
-							<span className='text-sm text-gray-500'>{zenSubscribers}</span>
+							<span className='text-sm text-gray-500'>
+								{zenSubscribers ? zenSubscribers : '0'}
+							</span>
 							<span className='text-sm text-gray-600'>Подписаться</span>
 						</div>
 					</Link>
@@ -162,7 +151,9 @@ const TenthElement = async () => {
 								</defs>
 							</svg>
 							<span className='font-medium'>RuTube</span>
-							<span className='text-sm text-gray-500'>{rutubeSubscribers}</span>
+							<span className='text-sm text-gray-500'>
+								{rutubeSubscribers ? rutubeSubscribers : '0'}
+							</span>
 							<span className='text-sm text-gray-600'>Подписаться</span>
 						</div>
 					</Link>
