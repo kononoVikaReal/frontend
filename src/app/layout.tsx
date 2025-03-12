@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 		siteName: 'Межрегиональный правовой центр» (МПЦ)',
 		images: [
 			{
-				url: 'https://mpctest.vercel.app/MPCIcon.jpg',
+				url: 'https://mpctest.vercel.app/MPCIcon.png',
 				width: 800,
 				height: 600,
 			},
