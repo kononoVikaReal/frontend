@@ -487,7 +487,6 @@ const Menu = () => {
 	useEffect(() => {
 		const checkVisibility = () => {
 			const firstSection = document.getElementById('forStickyMenu')
-			console.log('firstSection: ', firstSection)
 			if (firstSection) {
 				const rect = firstSection.getBoundingClientRect()
 

@@ -7,7 +7,7 @@ const FeedBackForm = ({ beforeFooter }: { beforeFooter: boolean }) => {
 
 	const handleSubmit = (e: FormEvent) => {
 		e.preventDefault()
-		console.log({ name, phone })
+		// console.log({ name, phone })
 		setName('')
 		setPhone('')
 	}

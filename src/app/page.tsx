@@ -34,6 +34,7 @@ async function getYoutubeSubscribers() {
 			)
 			.then(res => res.data.items[0].statistics.subscriberCount)
 	} catch (error) {
+		console.log('Ошибка при получении YouTube подписчиков')
 		if (axios.isAxiosError(error)) {
 			console.error('Ошибка Axios:', error.message)
 		} else if (error instanceof Error) {
@@ -56,7 +57,14 @@ async function getVkSubscribers() {
 			)
 			.then(res => res.data.response[0].members_count)
 	} catch (error) {
-		console.log('Ошибка при получении VK подписчиков: ', error)
+		console.log('Ошибка при получении VK подписчиков')
+		if (axios.isAxiosError(error)) {
+			console.error('Ошибка Axios:', error.message)
+		} else if (error instanceof Error) {
+			console.error('Общая ошибка:', error.message)
+		} else {
+			console.error('Неизвестная ошибка:', error)
+		}
 	}
 	return vkSubscribers
 }
@@ -75,7 +83,14 @@ async function getRutubeSubscribers() {
 			.get(`https://rutube.ru/api/profile/user/${rutubeID}`)
 			.then(res => res.data.subscribers_count)
 	} catch (error) {
-		console.log('Ошибка при получении Rutube подписчиков: ', error)
+		console.log('Ошибка при получении Rutube подписчиков')
+		if (axios.isAxiosError(error)) {
+			console.error('Ошибка Axios:', error.message)
+		} else if (error instanceof Error) {
+			console.error('Общая ошибка:', error.message)
+		} else {
+			console.error('Неизвестная ошибка:', error)
+		}
 	}
 	return rutubeSubscribers
 }

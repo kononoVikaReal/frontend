@@ -5,7 +5,7 @@ import OfficesMap from '../OfficesMap/OfficesMap'
 const VisitOfficeElement = () => {
 	const { currentCity } = useCity()
 	return (
-		<div className='relative min-h-screen'>
+		<div className='relative min-h-[80vh]'>
 			{/* Фоновая картинка на всю ширину и высоту */}
 			<div className='absolute inset-0 h-full w-full'>
 				<OfficesMap />
