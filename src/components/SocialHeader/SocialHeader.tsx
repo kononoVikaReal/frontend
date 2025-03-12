@@ -20,7 +20,7 @@ const SocialHeader = () => {
 					Telegram - частный клуб МПЦ
 				</span>
 				<Link
-					href={'https://t.me/mpcrf'}
+					href={'https://t.me/tribute/app?startapp=slWk'}
 					target='_blank'
 					className='bg-[#222222] rounded-md px-8 py-1 font-medium text-white text-sm transition-all duration-300 hover:shadow-lg hover:scale-105'
 				>
