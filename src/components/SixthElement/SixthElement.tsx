@@ -1,5 +1,18 @@
 import Image from 'next/image'
 
+const businessCenterSmallImages = [
+	{
+		src: '/BusinessCenter2.webp',
+		alt: 'Уютная зона для встреч с растениями',
+	},
+	{
+		src: '/BusinessCenter3.webp',
+		alt: 'Рабочее пространство с дисплеем брокера',
+	},
+	{ src: '/BusinessCenter4.webp', alt: 'Крытое садовое пространство' },
+	{ src: '/BusinessCenter5.webp', alt: 'Стол для совещаний со стульями' },
+]
+
 const SixthElement = () => {
 	return (
 		<div className='bg-slate-50 text-[#16161c] pb-8'>
@@ -20,65 +33,27 @@ const SixthElement = () => {
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 					{/* Крупная картинка */}
 					<div className='md:row-span-2 overflow-hidden rounded-lg'>
-						<div className='relative h-full w-full'>
-							<Image
-								src='/BusinessCenter1.webp'
-								alt='Atrium with glass ceiling'
-								fill
-								style={{ objectFit: 'cover' }}
-								className='transition-transform duration-300 hover:scale-105'
-							/>
-						</div>
+						<Image
+							src='/BusinessCenter1.webp'
+							alt='Атриум со стеклянным потолком'
+							width={600}
+							height={800}
+							className='transition-transform duration-300 hover:scale-105 w-full h-full object-cover'
+						/>
 					</div>
 
 					{/* Маленькие картинки */}
-					<div className='overflow-hidden rounded-lg'>
-						<div className='relative h-40 w-full'>
+					{businessCenterSmallImages.map(({ src, alt }) => (
+						<div key={src} className='overflow-hidden rounded-lg'>
 							<Image
-								src='/BusinessCenter2.webp'
-								alt='Cozy meeting area with plants'
-								fill
-								style={{ objectFit: 'cover' }}
-								className='transition-transform duration-300 hover:scale-105'
+								src={src}
+								alt={alt}
+								width={400}
+								height={160}
+								className='transition-transform duration-300 hover:scale-105 w-full h-40 object-cover'
 							/>
 						</div>
-					</div>
-
-					<div className='overflow-hidden rounded-lg'>
-						<div className='relative h-40 w-full'>
-							<Image
-								src='/BusinessCenter3.webp'
-								alt='Workspace with Broker display'
-								fill
-								style={{ objectFit: 'cover' }}
-								className='transition-transform duration-300 hover:scale-105'
-							/>
-						</div>
-					</div>
-
-					<div className='overflow-hidden rounded-lg'>
-						<div className='relative h-40 w-full'>
-							<Image
-								src='/BusinessCenter4.webp'
-								alt='Indoor garden space'
-								fill
-								style={{ objectFit: 'cover' }}
-								className='transition-transform duration-300 hover:scale-105'
-							/>
-						</div>
-					</div>
-
-					<div className='overflow-hidden rounded-lg'>
-						<div className='relative h-40 w-full'>
-							<Image
-								src='/BusinessCenter5.webp'
-								alt='Meeting table with chairs'
-								fill
-								style={{ objectFit: 'cover' }}
-								className='transition-transform duration-300 hover:scale-105'
-							/>
-						</div>
-					</div>
+					))}
 				</div>
 			</div>
 		</div>

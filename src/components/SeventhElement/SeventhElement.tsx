@@ -39,13 +39,13 @@ const SeventhElement = () => {
 											{index + 1}. {item.title}
 										</h2>
 									</div>
-									<div className='h-full w-full relative'>
+									<div className='h-full w-full overflow-hidden rounded-lg'>
 										<Image
 											src={item.image}
 											alt={item.title}
-											fill
-											style={{ objectFit: 'cover' }}
-											className='absolute inset-0'
+											width={500}
+											height={300}
+											className='object-cover w-full h-full'
 										/>
 									</div>
 								</div>

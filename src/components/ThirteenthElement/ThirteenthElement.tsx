@@ -47,7 +47,7 @@ const ThirteenthElement = () => {
 							>
 								<div className='relative flex-shrink-0'>
 									<Image
-										alt={`Portrait of ${speaker.name}`}
+										alt={`Портрет ${speaker.name}`}
 										className='w-40 h-40 object-cover rounded-full border-4 border-gray-700 transition-all duration-300 group-hover:border-blue-400'
 										height={160}
 										width={160}

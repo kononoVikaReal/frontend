@@ -37,7 +37,7 @@ const EleventhElement = () => {
 								<div className='relative w-36 h-36 '>
 									<Image
 										src='/PrivateTelegramQR.jpg'
-										alt='QR Code for private Telegram Channel'
+										alt='QR-код для частного Telegram-канала'
 										width={150}
 										height={150}
 										className='rounded-lg'

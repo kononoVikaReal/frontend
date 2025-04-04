@@ -112,7 +112,7 @@ export async function getZenSubscribers() {
 					subscriberText = text
 					foundElementTag = el.tagName as string
 					console.log(
-						`Найден подходящий текст: "${subscriberText}" в элементе <${foundElementTag}>`
+						`Найден подходящий текст: "${subscriberText}" в элементе <${foundElementTag}> на странице ${url}`
 					)
 				}
 			}

@@ -16,7 +16,7 @@ const StartElement = () => {
 			<div className='flex gap-4'>
 				<Image
 					src={'/IgorMatveev.jpg'}
-					alt={'Igor Matveev'}
+					alt={'Игорь Матвеев'}
 					width={128}
 					height={128}
 					className='rounded-lg w-32 h-32 object-cover'

@@ -1,6 +1,24 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+const speakerAdvantage = [
+	{
+		src: '/SpeakerAdvantage1.webp',
+		alt: 'Бизнес-презентация',
+		colSpan: 'col-span-2',
+	},
+	{
+		src: '/SpeakerAdvantage2.webp',
+		alt: 'Деловая встреча',
+		colSpan: 'col-span-1',
+	},
+	{
+		src: '/SpeakerAdvantage3.webp',
+		alt: 'Командная работа',
+		colSpan: 'col-span-1',
+	},
+]
+
 const NinthElement = () => {
 	return (
 		<div className='mx-auto max-w-[1200px] mb-10'>
@@ -35,7 +53,7 @@ const NinthElement = () => {
 								<div className='relative w-36 h-36 '>
 									<Image
 										src='/PublicTelegramQR.jpg'
-										alt='QR Code for public Telegram Channel'
+										alt='QR-код для публичного Telegram-канала'
 										width={130}
 										height={130}
 										className='rounded-lg'
@@ -55,34 +73,21 @@ const NinthElement = () => {
 						нашу аудиторию
 					</p>
 					{/* Картинки */}
-					<div className='grid md:grid-cols-4 gap-4 '>
-						<div className='col-span-2 overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105 hover:ring-4 hover:ring-elite'>
-							<Image
-								src='/SpeakerAdvantage1.webp'
-								alt='Business presentation'
-								width={608}
-								height={352}
-								className='w-full h-72 object-cover'
-							/>
-						</div>
-						<div className='col-span-1 overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105 hover:ring-4 hover:ring-elite'>
-							<Image
-								src='/SpeakerAdvantage2.webp'
-								alt='Business meeting'
-								width={279}
-								height={352}
-								className='w-full h-72 object-cover'
-							/>
-						</div>
-						<div className='col-span-1 overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105 hover:ring-4 hover:ring-elite'>
-							<Image
-								src='/SpeakerAdvantage3.webp'
-								alt='Team working'
-								width={279}
-								height={352}
-								className='w-full h-72 object-cover'
-							/>
-						</div>
+					<div className='grid md:grid-cols-4 gap-4'>
+						{speakerAdvantage.map(({ src, alt, colSpan }) => (
+							<div
+								key={src}
+								className={`${colSpan} overflow-hidden rounded-lg transition-all duration-300 hover:shadow-xl hover:scale-105 hover:ring-4 hover:ring-elite`}
+							>
+								<Image
+									src={src}
+									alt={alt}
+									width={608}
+									height={352}
+									className='w-full h-72 object-cover'
+								/>
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
