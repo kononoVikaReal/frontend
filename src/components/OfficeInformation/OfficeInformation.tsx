@@ -85,19 +85,19 @@ const formatCityName = (city: City): string => {
 const cityData = {
 	'Saint-Petersburg': {
 		address: 'Петроградская набережная, дом 20, БЦ "Веда-Хаус", офис 223',
-		phone: '8 (800) 777-17-00',
+		// phone: '8 (800) 777-17-00',
 	},
 	Tula: {
 		address: 'ул. Пушкина, дом 45, офис 101',
-		phone: '8 (800) 777-17-00',
+		// phone: '8 (800) 777-17-00',
 	},
 	Krasnodar: {
 		address: 'ул. Красная, дом 78, офис 305',
-		phone: '8 (800) 777-17-00',
+		// phone: '8 (800) 777-17-00',
 	},
 	Sevastopol: {
 		address: 'ул. Морская, дом 56, офис 210',
-		phone: '8 (800) 777-17-00',
+		// phone: '8 (800) 777-17-00',
 	},
 }
 
@@ -191,14 +191,16 @@ const OfficeInformation: React.FC<{
 
 					<div className='flex items-center gap-4'>
 						<Link
-							href={`tel:${cityData[currentCity].phone.replace(
-								/(?!^\+)\D/g,
-								''
-							)}`}
+							// href={`tel:${cityData[currentCity].phone.replace(
+							// 	/(?!^\+)\D/g,
+							// 	''
+							// )}`}
+							href={`tel:88007771700`}
 							className='flex items-center gap-2 transition-all duration-500 ease-in-out hover:scale-105 group'
 						>
 							<CallIcon className='w-5 h-5' />
-							<span>{cityData[currentCity].phone}</span>
+							{/* <span>{cityData[currentCity].phone}</span> */}
+							<span>8 (800) 777-17-00</span>
 							<div className='absolute -bottom-3 left-0 w-0 h-0.5 bg-gray-500 rounded-full transition-all duration-500 ease-in-out group-hover:w-full'></div>
 						</Link>
 

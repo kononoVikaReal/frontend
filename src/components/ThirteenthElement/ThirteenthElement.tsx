@@ -2,25 +2,25 @@ import Image from 'next/image'
 
 const speakers = [
 	{
-		avatar: '/IgorMatveev.png',
+		avatar: '/IgorMatveev.jpg',
 		name: 'Игорь Владимирович Матвеев',
 		role: 'Автор проекта, юрист',
 		description: 'Окончил университет МВД России',
 	},
 	{
-		avatar: '/MuxtarSaidovich.png',
+		avatar: '/MuxtarSaidovich.jpg',
 		name: 'Мухтар Саидович Магомедов',
 		role: 'Юрист',
 		description: 'Окончил Вологодский институт права и экономики ФСИН России',
 	},
 	{
-		avatar: '/VadimGennadevich.png',
+		avatar: '/VadimGennadevich.jpg',
 		name: 'Вадим Геннадьевич Ерхов',
 		role: 'Юрист',
 		description: 'Окончил Московскую государственную юридическую академию',
 	},
 	{
-		avatar: '/JuliaVladimirovna.png',
+		avatar: '/JuliaVladimirovna.jpg',
 		name: 'Юлия Владимировна Власова',
 		role: 'Адвокат по соглашению',
 		description:
@@ -48,9 +48,9 @@ const ThirteenthElement = () => {
 								<div className='relative flex-shrink-0'>
 									<Image
 										alt={`Portrait of ${speaker.name}`}
-										className='rounded-full border-4 border-gray-700 transition-all duration-300 group-hover:border-blue-400'
-										height={96}
-										width={96}
+										className='w-40 h-40 object-cover rounded-full border-4 border-gray-700 transition-all duration-300 group-hover:border-blue-400'
+										height={160}
+										width={160}
 										src={speaker.avatar}
 									/>
 								</div>

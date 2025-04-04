@@ -17,83 +17,16 @@ import ThirdElement from '@/components/ThirdElement/ThirdElement'
 import ThirteenthElement from '@/components/ThirteenthElement/ThirteenthElement'
 import TwelfthElement from '@/components/TwelfthElement/TwelfthElement'
 import VisitOfficeElement from '@/components/VisitOfficeElement/VisitOfficeElement'
-import axios from 'axios'
+import {
+	getRutubeSubscribers,
+	getVkSubscribers,
+	getYoutubeSubscribers,
+	getZenSubscribers,
+} from '@/lib/subscribers'
 
 // Включаем ISR
 // Каждые 60 секунд ревалидируем данные от запросов
 export const revalidate = 60
-
-async function getYoutubeSubscribers() {
-	let youtubeSubscribers = undefined
-	try {
-		const googleAPIKey = process.env.GOOGLE_API_KEY
-		const youtubeChannelID = 'UCOESKqC1ycRpuZ62uCzmRFA'
-		youtubeSubscribers = await axios
-			.get(
-				`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${youtubeChannelID}&fields=items/statistics/subscriberCount&key=${googleAPIKey}`
-			)
-			.then(res => res.data.items[0].statistics.subscriberCount)
-	} catch (error) {
-		console.log('Ошибка при получении YouTube подписчиков')
-		if (axios.isAxiosError(error)) {
-			console.error('Ошибка Axios:', error.message)
-		} else if (error instanceof Error) {
-			console.error('Общая ошибка:', error.message)
-		} else {
-			console.error('Неизвестная ошибка:', error)
-		}
-	}
-	return youtubeSubscribers
-}
-
-async function getVkSubscribers() {
-	const vkGroupID = '211186476'
-	const vkAPIKey = process.env.VK_API_KEY
-	let vkSubscribers = undefined
-	try {
-		vkSubscribers = await axios
-			.get(
-				`http://api.vk.com/method/groups.getById?group_ids=${vkGroupID}&fields=members_count&access_token=${vkAPIKey}&v=5.81`
-			)
-			.then(res => res.data.response[0].members_count)
-	} catch (error) {
-		console.log('Ошибка при получении VK подписчиков')
-		if (axios.isAxiosError(error)) {
-			console.error('Ошибка Axios:', error.message)
-		} else if (error instanceof Error) {
-			console.error('Общая ошибка:', error.message)
-		} else {
-			console.error('Неизвестная ошибка:', error)
-		}
-	}
-	return vkSubscribers
-}
-
-async function getZenSubscribers() {
-	// На момент 2025 года у них нету API (по крайней мере, общедоступного)
-	const zenSubscribers = 68400
-	return zenSubscribers
-}
-
-async function getRutubeSubscribers() {
-	const rutubeID = '24837155'
-	let rutubeSubscribers = undefined
-	try {
-		rutubeSubscribers = await axios
-			.get(`https://rutube.ru/api/profile/user/${rutubeID}`)
-			.then(res => res.data.subscribers_count)
-	} catch (error) {
-		console.log('Ошибка при получении Rutube подписчиков')
-		if (axios.isAxiosError(error)) {
-			console.error('Ошибка Axios:', error.message)
-		} else if (error instanceof Error) {
-			console.error('Общая ошибка:', error.message)
-		} else {
-			console.error('Неизвестная ошибка:', error)
-		}
-	}
-	return rutubeSubscribers
-}
 
 export default async function Home() {
 	// Получение подписчиков
@@ -119,12 +52,15 @@ export default async function Home() {
 				<SeventhElement />
 				<EighthElement />
 				<NinthElement />
+
+				{/* Используем nullish coalescing для обработки undefined */}
 				<TenthElement
-					youtubeSubscribers={youtubeSubscribers}
-					vkSubscribers={vkSubscribers}
-					zenSubscribers={zenSubscribers}
-					rutubeSubscribers={rutubeSubscribers}
+					youtubeSubscribers={youtubeSubscribers ?? 0}
+					vkSubscribers={vkSubscribers ?? 0}
+					zenSubscribers={zenSubscribers ?? 0}
+					rutubeSubscribers={rutubeSubscribers ?? 0}
 				/>
+
 				<EleventhElement />
 				<TwelfthElement />
 				<ThirteenthElement />

@@ -15,11 +15,11 @@ const StartElement = () => {
 			</h1>
 			<div className='flex gap-4'>
 				<Image
-					src={'/IgorMatveev.png'}
+					src={'/IgorMatveev.jpg'}
 					alt={'Igor Matveev'}
-					width={135}
-					height={135}
-					className='rounded-lg'
+					width={128}
+					height={128}
+					className='rounded-lg w-32 h-32 object-cover'
 				/>
 
 				<blockquote className='text-lg text-gray-300 border-l-4 border-gray-500 pl-4 italic'>

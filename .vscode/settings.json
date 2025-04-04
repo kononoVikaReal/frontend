@@ -1,4 +1,5 @@
 {
-	"cSpell.words": ["prata", "rutube", "UCOES"],
-	"typescript.tsdk": "node_modules\\typescript\\lib"
+	"cSpell.words": ["prata", "rutube", "UCOES", "парсинге", "ревалидируем"],
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"postman.settings.dotenv-detection-notification-visibility": false
 }

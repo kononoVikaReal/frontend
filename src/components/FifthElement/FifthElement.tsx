@@ -3,19 +3,19 @@ import Image from 'next/image'
 const people = [
 	{
 		name: 'Игорь Матвеев',
-		image: '/IgorMatveev.png',
+		image: '/IgorMatveev.jpg',
 	},
 	{
 		name: 'Мухтар Магомедов',
-		image: '/MuxtarSaidovich.png',
+		image: '/MuxtarSaidovich.jpg',
 	},
 	{
 		name: 'Юлия Власова',
-		image: '/JuliaVladimirovna.png',
+		image: '/JuliaVladimirovna.jpg',
 	},
 	{
 		name: 'Вадим Ерхов',
-		image: '/VadimGennadevich.png',
+		image: '/VadimGennadevich.jpg',
 	},
 ]
 
@@ -41,9 +41,9 @@ const FifthElement = () => {
 							<Image
 								src={person.image}
 								alt={person.name}
-								className='w-32 h-32 object-cover rounded-full mb-2'
-								width={128}
-								height={128}
+								className='w-40 h-40 object-cover rounded-full mb-2'
+								width={160}
+								height={160}
 							/>
 							<span className='text-lg font-medium'>{person.name}</span>
 							<div className='w-0 h-1 bg-elite rounded-full transition-all duration-500 ease-in-out group-hover:w-3/5'></div>
