@@ -1,5 +1,5 @@
 import FeedBackForm from '../FeedBackForm/FeedBackForm'
-import { CourtCaseCard } from '../LawyerCases/CourtCaseCard'
+import JudicalPractice from '../JudicalPractice/JudicalPractice'
 
 const ThirdElement = () => {
 	return (
@@ -12,9 +12,9 @@ const ThirdElement = () => {
 				</div>
 			</div>
 			{/* <LawyerCaseFiles /> */}
-			<CourtCaseCard />
+			<JudicalPractice />
 
-			<button
+			{/* <button
 				className='
     bg-gradient-to-r from-blue-600 to-blue-500
     hover:from-blue-700 hover:to-blue-600
@@ -66,7 +66,7 @@ const ThirdElement = () => {
 					</svg>
 					Смотреть все
 				</span>
-			</button>
+			</button> */}
 			<FeedBackForm beforeFooter={false} />
 		</div>
 	)
