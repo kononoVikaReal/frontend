@@ -7,15 +7,15 @@ const people = [
 	},
 	{
 		name: 'Мухтар Магомедов',
-		image: '/MuxtarSaidovich.jpg',
+		image: '/MuxtarSaidovich2.jpg',
 	},
 	{
 		name: 'Юлия Власова',
-		image: '/JuliaVladimirovna.jpg',
+		image: '/JuliaVladimirovna2.jpg',
 	},
 	{
 		name: 'Вадим Ерхов',
-		image: '/VadimGennadevich.jpg',
+		image: '/VadimGennadevich2.jpg',
 	},
 ]
 
@@ -41,9 +41,10 @@ const FifthElement = () => {
 							<Image
 								src={person.image}
 								alt={person.name}
-								className='w-40 h-40 object-cover rounded-full mb-2'
-								width={160}
-								height={160}
+								// w-40 h-40 object-cover rounded-full mb-2
+								className='w-48 h-48 object-cover rounded-full mb-2'
+								width={700}
+								height={700}
 							/>
 							<span className='text-lg font-medium'>{person.name}</span>
 							<div className='w-0 h-1 bg-elite rounded-full transition-all duration-500 ease-in-out group-hover:w-3/5'></div>

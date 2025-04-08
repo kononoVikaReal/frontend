@@ -75,7 +75,7 @@ const TwelfthElement = () => {
 					<div className='mt-8 flex justify-center'>
 						<Link
 							href={'#'}
-							className='inline-flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl px-10 py-4 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
+							className='inline-flex items-center justify-center gap-3 bg-[#55A4FC] hover:bg-blue-700 text-white font-medium rounded-xl px-10 py-4 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl'
 						>
 							<span className='text-lg tracking-tight'>Все услуги</span>
 							<svg

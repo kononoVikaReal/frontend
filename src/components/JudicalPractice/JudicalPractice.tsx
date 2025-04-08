@@ -93,7 +93,7 @@ export default function JudicalPractice() {
 			<div className=''>
 				<div className='flex justify-center'>
 					{/* Контейнер для iPad со стоковым изображением */}
-					<div className='relative w-full max-w-[912px]'>
+					<div className='relative w-full max-w-[1112px]'>
 						{/* Стоковое изображение iPad определенных размеров */}
 						<div className='relative'>
 							<Image
@@ -235,7 +235,7 @@ export default function JudicalPractice() {
 									<div className='mt-4 sm:mt-6 text-center'>
 										<Button
 											asChild
-											className='bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm py-2 px-3 sm:py-2 sm:px-4 h-auto'
+											className='bg-[#55A4FC] hover:bg-blue-700 text-white text-xs sm:text-sm py-2 px-3 sm:py-2 sm:px-4 h-auto'
 										>
 											<Link href='/all-cases'>
 												<span className='flex items-center gap-1 sm:gap-2'>

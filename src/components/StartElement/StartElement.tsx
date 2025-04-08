@@ -10,16 +10,16 @@ const StartElement = () => {
 
 				<OfficeInformation />
 			</div>
-			<h1 className='text-right text-3xl leading-[58px] font-medium pr-4'>
+			<h1 className='text-right text-3xl leading-[58px] font-medium pr-3'>
 				МПЦ – это команда профессиональных юристов нового формата
 			</h1>
 			<div className='flex gap-4'>
 				<Image
 					src={'/IgorMatveev.jpg'}
 					alt={'Игорь Матвеев'}
-					width={128}
-					height={128}
-					className='rounded-lg w-32 h-32 object-cover'
+					width={160}
+					height={160}
+					className='rounded-lg w-40 h-40 object-cover'
 				/>
 
 				<blockquote className='text-lg text-gray-300 border-l-4 border-gray-500 pl-4 italic'>
