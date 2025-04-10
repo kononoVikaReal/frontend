@@ -93,7 +93,7 @@ export default function JudicalPractice() {
 			<div className=''>
 				<div className='flex justify-center'>
 					{/* Контейнер для iPad со стоковым изображением */}
-					<div className='relative w-full max-w-[1112px]'>
+					<div className='relative w-full max-w-[912px]'>
 						{/* Стоковое изображение iPad определенных размеров */}
 						<div className='relative'>
 							<Image

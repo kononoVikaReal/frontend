@@ -7,11 +7,11 @@ const people = [
 	},
 	{
 		name: 'Мухтар Магомедов',
-		image: '/MuxtarSaidovich2.jpg',
+		image: '/MuxtarSaidovich4.jpg',
 	},
 	{
 		name: 'Юлия Власова',
-		image: '/JuliaVladimirovna2.jpg',
+		image: '/JuliaVladimirovna3.jpg',
 	},
 	{
 		name: 'Вадим Ерхов',
